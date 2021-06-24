@@ -16,15 +16,15 @@ function writePassword() {
 
 function generatePassword(){
 let passwordLength = prompt ("How many characters long?\nMinimum: 8\nMaximum: 128");
-//Check that the user entered a value
-// if (!enter) {
-//   alert("This needs a value");
-//   //Make sure the value is in range
-// } else if (enter < 8) {
-//   enter = parseInt(prompt("You must choose above 8"));
-// } else {
-//   enter = parseInt(prompt("You must choose below 128"));}
-// }
+// Check that the user entered a value
+if (!enter) {
+  alert("This needs a value");
+  //Make sure the value is in range
+} else if (enter < 8) {
+  enter = parseInt(prompt("You must choose above 8"));
+} else {
+  enter = parseInt(prompt("You must choose below 128"));}
+}
 
 let numberOption = confirm ("Would you like to include numbers?");
 let specialOption = confirm ("Would you like to include special characters?");
@@ -52,8 +52,6 @@ for (var i = 0; i < passwordLength; i++) {
           password = password + userSelections[randomNum]; 
 }
 return password;
-
-}
 
 
 // Add event listener to generate button
