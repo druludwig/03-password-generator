@@ -23,10 +23,10 @@ if (passwordLength < 8) {
   passwordLength = 128
 } 
 
-let numberOption = confirm ("Would you like to include numbers?");
-let specialOption = confirm ("Would you like to include special characters?\nExample: ! @ # $ % ^ & * ( ) - _ +");
-let lowerOption = confirm ("Would you like to include *lowercase* letters?");
-let upperOption = confirm ("Would you like to include CAPITAL letters?");
+let numberOption = confirm ("Would you like to include numbers in your password?");
+let specialOption = confirm ("Would you like to include special characters in your password?\nExample: ! @ # $ % ^ & * ( ) - _ +");
+let lowerOption = confirm ("Would you like to include *lowercase* letters in your password?");
+let upperOption = confirm ("Would you like to include CAPITAL letters in your password?");
 
 let userSelections = [];
 let password = [];
