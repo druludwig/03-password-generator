@@ -44,7 +44,6 @@ if (upperOption){
   userSelections = userSelections.concat(upperOptions)
 }
 
-
 for (var i = 0; i < passwordLength; i++) {
      let randomNum = Math.floor(Math.random() * userSelections.length);
           password = password + userSelections[randomNum]; 
