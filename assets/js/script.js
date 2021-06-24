@@ -15,16 +15,37 @@ function writePassword() {
 }
 
 function generatePassword(){
-  
-// let passwordLength = prompt ("How many characters long?\nMinimum: 8\nMaximum: 128");
-// let numberOption = confirm ("Would you like to include numbers?");
-// let upperOption = confirm ("Would you like to include CAPITAL letters?");
-// let lowerOption = confirm ("Would you like to include *lowercase* letters?");
-// let specialOption = confirm ("Would you like to include special characters?");
+let passwordLength = prompt ("How many characters long?\nMinimum: 8\nMaximum: 128");
+//Check that the user entered a value
+// if (!enter) {
+//   alert("This needs a value");
+//   //Make sure the value is in range
+// } else if (enter < 8) {
+//   enter = parseInt(prompt("You must choose above 8"));
+// } else {
+//   enter = parseInt(prompt("You must choose below 128"));}
+// }
 
-let passwordLength = 27;
-let userSelections = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-let password = '';
+let numberOption = confirm ("Would you like to include numbers?");
+let specialOption = confirm ("Would you like to include special characters?");
+let lowerOption = confirm ("Would you like to include *lowercase* letters?");
+let upperOption = confirm ("Would you like to include CAPITAL letters?");
+
+let userSelections = [];
+let password = [];
+
+if (numberOption){
+  userSelections = userSelections.concat(numericOptions)
+}
+if (specialOption){
+  userSelections = userSelections.concat(specialOptions)
+}
+if (lowerOption){
+  userSelections = userSelections.concat(lowerOptions)
+}
+if (upperOption){
+  userSelections = userSelections.concat(upperOptions)
+}
 
 for (var i = 0; i < passwordLength; i++) {
      let randomNum = Math.floor(Math.random() * userSelections.length);
