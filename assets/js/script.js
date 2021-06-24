@@ -3,9 +3,11 @@ let numericOptions = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 let specialOptions = ["*", "(",")", "@", "%", "^", "&", "-", "=", "_", "+", "#", "$"];
 let lowerOptions = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o",  "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 let upperOptions = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+let letters = ["/^[A-Za-z]+$/;"]
 
 // Assignment Code
 let generateBtn = document.querySelector("#generate");
+let copyButton = document.querySelector("#copy");
 
 // Write password to the #password input
 function writePassword() {
@@ -19,10 +21,13 @@ function generatePassword(){
 let passwordLength = prompt ("How many characters long?\nMinimum: 8\nMaximum: 128\n\rNote: Inputs out of range will automatically round up to 8 or down to 128 respectively.");
 //If user inputs a length out of range, the app will autoselect the closest option available
 if (passwordLength < 8) {
-  passwordLength = 8
-} else if (passwordLength > 128) {
-  passwordLength = 128
-} 
+  passwordLength = 8;
+  alert("Your entry was automatically rounded up to 8.")
+}
+if (passwordLength > 128){
+  passwordLength = 128;
+  alert("Your entry was automatically rounded down to 128.")}
+
 //User inputs (cont.)
 let numberOption = confirm ("Would you like to include numbers in your password?");
 let specialOption = confirm ("Would you like to include special characters in your password?\nExample: ! @ # $ % ^ & * ( ) - _ +");
@@ -62,3 +67,18 @@ return password;
 }
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
+//Copy password button
+function copyPassword() {
+  var copyText = document.getElementById("password");
+  //If there's a password, copy it and alert user
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  alert("Your password was copied.\nYou may paste it wherever you choose.")
+  }
+  ;
+
+
+copyButton.addEventListener("click", copyPassword);

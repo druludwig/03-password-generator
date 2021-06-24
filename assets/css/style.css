@@ -12,18 +12,24 @@ body,
   padding: 0;
 }
 
+a:visited{
+  color: #e31b23;
+  ;
+}
+
 h1{
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 400;
 }
 
 h2 {
   text-align: center;
+  font-size: 24px;
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: #f9fbfd;
+  background-color: #f0e9e1;
 }
 
 .wrapper {
@@ -83,7 +89,7 @@ header {
 
 .btn {
   border: none;
-  background-color: purple;
+  background-color: #e31b23;
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
@@ -95,6 +101,22 @@ header {
   padding: 14px 34px;
   text-align: center;
   cursor: pointer;
+}
+
+.btn-small {
+  border: none;
+  background-color: #5452a5;
+  border-radius: 15px;
+  box-shadow: rgb(0, 0, 0) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+    0px;
+  color: hsl(0, 0%, 100%);
+  font-size: 16px;
+  line-height: 14px;
+  margin: 16px 16px 16px 20px;
+  padding: 10px 24px;
+  text-align: center;
+  cursor: pointer;
+
 }
 
 button[disabled] {
