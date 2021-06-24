@@ -15,22 +15,30 @@ function writePassword() {
 }
 
 function generatePassword(){
+//Start user inputs
 let passwordLength = prompt ("How many characters long?\nMinimum: 8\nMaximum: 128\n\rNote: Inputs out of range will automatically round up to 8 or down to 128 respectively.");
-
+//If user inputs a length out of range, the app will autoselect the closest option available
 if (passwordLength < 8) {
   passwordLength = 8
-} else if (passwordLength < 128) {
+} else if (passwordLength > 128) {
   passwordLength = 128
 } 
-
+//User inputs (cont.)
 let numberOption = confirm ("Would you like to include numbers in your password?");
 let specialOption = confirm ("Would you like to include special characters in your password?\nExample: ! @ # $ % ^ & * ( ) - _ +");
 let lowerOption = confirm ("Would you like to include *lowercase* letters in your password?");
-let upperOption = confirm ("Would you like to include CAPITAL letters in your password?");
-
+let upperOption = true;
+// If user declines first three options, then app autoselects the remaining option
+if (!numberOption && !specialOption && !lowerOption){
+  let upperOption = true;
+} else{
+  upperOption = confirm ("Would you like to include CAPITAL letters in your password?");
+}
+//Variables to be populated
 let userSelections = [];
 let password = [];
 
+//Compiling the userSelections array
 if (numberOption){
   userSelections = userSelections.concat(numericOptions)
 }
@@ -43,7 +51,7 @@ if (lowerOption){
 if (upperOption){
   userSelections = userSelections.concat(upperOptions)
 }
-
+//Repeat this for as many times as the user input
 for (var i = 0; i < passwordLength; i++) {
      let randomNum = Math.floor(Math.random() * userSelections.length);
           password = password + userSelections[randomNum]; 
