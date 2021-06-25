@@ -94,10 +94,10 @@ header {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
   color: hsl(0, 0%, 100%);
-  display: inline-block;
+  display: block;
   font-size: 27px;
   line-height: 22px;
-  margin: 16px 16px 16px 20px;
+  margin: 16px auto;
   padding: 14px 34px;
   text-align: center;
   cursor: pointer;
@@ -112,11 +112,11 @@ header {
   color: hsl(0, 0%, 100%);
   font-size: 16px;
   line-height: 14px;
-  margin: 16px 16px 16px 20px;
+  margin: 16px auto;
   padding: 10px 24px;
   text-align: center;
   cursor: pointer;
-
+  display: block;
 }
 
 button[disabled] {
@@ -149,20 +149,39 @@ button[disabled] {
   overflow: hidden;
 }
 
-@media (max-width: 690px) {
-  .btn {
-    font-size: 1rem;
-    margin: 16px 0px 0px 0px;
-    padding: 10px 15px;
-  }
-
-  #password {
-    font-size: 1rem;
-  }
-}
-
 @media (max-width: 500px) {
-  .btn {
-    font-size: 0.8rem;
-  }
+p{
+  font-size: 0.9rem
 }
+
+ul{
+  font-size: 0.8rem
+}
+
+h1{
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 5px;
+}
+
+h2{
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+.card{
+  padding: 10px 10px
+}
+
+.btn {
+  font-size: 1rem;
+  margin: 16px 0px 0px 0px;
+  padding: 10px 15px;
+}
+
+#password {
+  font-size: 1rem;
+}
+}
+
