@@ -81,5 +81,4 @@ function copyPassword() {
   }
   ;
 
-
 copyButton.addEventListener("click", copyPassword);
