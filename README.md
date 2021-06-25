@@ -1,5 +1,5 @@
 # Custom Password Generator
- 
+ Open: https://druludwig.github.io/03-password-generator/
 ## Description
 Security experts suggest using a unique password for each of your accounts. This random password generator app creates a random custom password that may include some or all of the following:
 
